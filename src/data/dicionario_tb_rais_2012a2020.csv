@@ -1,0 +1,30 @@
+Id_Variável;Tipo;Descrição;Fonte;Série Disponível;;;;
+ANO;Número;Correponde ao ano de referência dos dados.;"Ministério do Trabalho e Emprego – MTE. Relação Anual de Informações Sociais – Rais; Fundação Seade";2012 - 2020;;;;
+Cod_IBGE;Número;Corresponde ao código da localidade.;"Ministério do Trabalho e Emprego – MTE. Relação Anual de Informações Sociais – Rais; Fundação Seade";2012 - 2020;;;;
+TAMESTAB;Número;"Corresponde às categorias referente ao número de empregados vinculados na classe de atividade econômica de referência; onde:
+""2 - De 1 a 4 ""
+""3 - De 5 a 9 ""
+""4 - De 10 a 19 ""
+""5 - De 20 a 49""
+""6 - De 50 a 99 ""
+""7 - De 100 a 249 ""
+""8 - De 250 a 499 ""
+""9 - De 500 a 999 ""
+""10 - 1.000 ou mais "".";"Ministério do Trabalho e Emprego – MTE. Relação Anual de Informações Sociais – Rais; Fundação Seade";2012 - 2020;;;;
+CBO2002_FAMILIA;Número;Corresponde ao código da família ocupacional segundo a hierarquia estabelecida na Classificação Nacional de Atividades Econômicas - CNAE 2.0. Mais informações disponíveis em: https://concla.ibge.gov.br;"Ministério do Trabalho e Emprego – MTE. Relação Anual de Informações Sociais – Rais; Fundação Seade";2012 - 2020;;;;  
+Cod_Classe;Número;Corresponde ao código da classe segundo a hierarquia estabelecida na Classificação Nacional de Atividades Econômicas - CNAE 2.0. Mais informações disponíveis em: https://concla.ibge.gov.br;"Ministério do Trabalho e Emprego – MTE. Relação Anual de Informações Sociais – Rais; Fundação Seade";2012 - 2020;;;;
+GR_INSTRUCAO;Número;"Corresponde à categoria referente à escolaridade dos empregados na classe de atividade econômica de referência, onde:
+""1 - Analfabeto""
+""2 - Até a 5ª Incompleta""
+""3 - 5ª completo fundamental""
+""4 - 6ª a 9ª fundamental""
+""5 - Fundamental completo""
+""6 - Médio incompleto""
+""7 - Médio completo""
+""8 - Superior incompleto""
+""9 - Superior completo""
+""10 - Mestrado""
+""11 - Doutorado"".";"Ministério do Trabalho e Emprego – MTE. Relação Anual de Informações Sociais – Rais; Fundação Seade";2012 - 2020;;;;
+Massa de Rendimentos;Número;Massa de Rendimentos: corresponde a soma dos rendimentos individuais recebidos em dezembro de cada ano.;"Ministério do Trabalho e Emprego – MTE. Relação Anual de Informações Sociais – Rais; Fundação Seade";2012 - 2020;;;;
+Emprego Formal;Número;Corresponde ao número de empregados no ano e na localidade de referência.;"Ministério do Trabalho e Emprego – MTE. Relação Anual de Informações Sociais – Rais; Fundação Seade";2012 - 2020;;;;
+SALMEDIO;Número;Corresponde ao valor nominal da média salarial recebido pelos empregados no ano e na localidade de referência. Excluí os empregados que receberam não receberam salário em dezembro do ano de referência.;"Ministério do Trabalho e Emprego – MTE. Relação Anual de Informações Sociais – Rais; Fundação Seade";2012 - 2020;;;;

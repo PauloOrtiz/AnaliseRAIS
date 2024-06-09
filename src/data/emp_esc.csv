@@ -1,0 +1,12 @@
+Gr_Instrucao;Gr_Instrucao_nome;escola;escola_ord
+1; Analfabeto;Fundamental Incompleto;1
+2; Até a 5ª Incompleta;Fundamental Incompleto;1
+3; 5ª completo fundamental;Fundamental Incompleto;1
+4; 6ª a 9ª fundamental;Fundamental Incompleto;1
+5; Fundamental completo;Fundamental Completo;2
+6; Médio incompleto;Fundamental Completo;2
+7; Médio completo;Médio Completo;3
+8; Superior incompleto;Superior;4
+9; Superior completo;Superior;4
+10; Mestrado;Superior;4
+11; Doutorado.;Superior;4

@@ -1,0 +1,10 @@
+Column;Dtype
+Ano;object
+Cod_ibge;object
+CBO2002_FAMILIA;object
+CLAS_CNAE_20;object
+GR_INSTRUCAO;object
+TAMESTAB;object
+massa_rendimentos;float64
+Emprego_formal;int64
+EMP_C_SAL;int64

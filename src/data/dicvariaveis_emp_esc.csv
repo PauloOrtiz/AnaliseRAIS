@@ -1,0 +1,5 @@
+Variável;Tipo;Descrição;Fonte;Ano
+Gr_Instrucao;numérico;Grau de instrução - identificador;"Ministério do Trabalho e Emprego – MTE. Relação Anual de Informações Sociais – Rais; Fundação Seade";2018
+Gr_Instrucao_nome;numérico;Grau de instrução;"Ministério do Trabalho e Emprego – MTE. Relação Anual de Informações Sociais – Rais; Fundação Seade";2018
+escola;numérico;Escolaridade;"Ministério do Trabalho e Emprego – MTE. Relação Anual de Informações Sociais – Rais; Fundação Seade";2018
+escola_ord;numérico;Escolaridade - identificador;"Ministério do Trabalho e Emprego – MTE. Relação Anual de Informações Sociais – Rais; Fundação Seade";2018

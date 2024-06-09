@@ -1,0 +1,11 @@
+Column;Dtype
+ANO;int64
+Cod_ibge;int64
+CBO2002_FAMILIA;object
+CLAS_CNAE_20;int64
+GR_INSTRUCAO;int64
+TAMESTAB;int64
+massa_rendimentos;object
+Emprego_formal;int64
+EMP_C_SAL;int64
+Escolaridade;int64
