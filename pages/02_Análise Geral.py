@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
+import bar_chart_race as bcr
+from PIL import Image
+
 
 
 st.set_page_config(page_title="Coleta e Tratamento de Dados RAIS")
@@ -10,7 +13,7 @@ st.title("Analisando os Dados RAIS - São Paulo")
 with open("./src/css/style.css") as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
     
-tab1, tab2,tab3 = st.tabs(["Empregos formais", "Salário","Setores Produtivos"])
+tab1, tab2,tab3, tab4 = st.tabs(["Empregos formais", "Salário","Setores Produtivos", "CNEA"])
 
 
 with tab1:
@@ -436,3 +439,55 @@ with tab3:
     Utilizamos dados fornecidos pelo governo, especificamente a tabela do CNAE, para categorizar os empregos formais de acordo com esses três grandes grupos. A partir dessa categorização, podemos observar como cada grupo contribui para o mercado de trabalho formal.
 
     """)
+
+with tab4:
+    df = pd.read_csv('./src/data/tratado/Raistop10descindustriageral.csv', delimiter=';')
+
+        # Garantir que os anos estejam em ordem correta
+    df['Ano'] = pd.Categorical(df['Ano'], categories=[2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021], ordered=True)
+
+    # Pivotar o DataFrame para o formato necessário
+    df_pivot = df.pivot(index='Ano', columns='Descr_Classe', values='Emprego_formal').fillna(0)
+
+    # Criar a animação e salvar como um arquivo GIF
+    bcr.bar_chart_race(
+        df=df_pivot,
+        filename='evolucao_emprego_formal.gif',
+        orientation='h',
+        sort='desc',
+        n_bars=10,
+        fixed_order=False,
+        fixed_max=True,
+        steps_per_period=10,
+        interpolate_period=False,
+        label_bars=True,
+        bar_size=.95,
+        period_label={'x': .99, 'y': .25, 'ha': 'right', 'va': 'center'},
+        period_fmt='%d',
+        period_summary_func=lambda v, r: {'x': .99, 'y': .18, 
+                                        's': f'Total Empregos: {v.sum():,.0f}', 
+                                        'ha': 'right', 'size': 8, 'family': 'Courier New'},
+        perpendicular_bar_func='median',
+        period_length=2000,
+        figsize=(10, 6),
+        dpi=144,
+        cmap='dark12',
+        title='Evolução do Emprego Formal por Setor',
+        title_size='',
+        bar_label_size=7,
+        tick_label_size=7,
+        shared_fontdict={'family' : 'Helvetica', 'color' : '.1'},
+        scale='linear',
+        writer=None,
+        fig=None,
+        bar_kwargs={'alpha': .7},
+        filter_column_colors=False)
+
+    # Mostrar a animação no Streamlit
+    st.title("Evolução do Emprego Formal por Setor")
+
+    # Ler o arquivo GIF e exibi-lo no Streamlit
+    gif_path = 'evolucao_emprego_formal.gif'
+    st.image(gif_path)
+
+    st.write("Animação salva como evolucao_emprego_formal.gif")

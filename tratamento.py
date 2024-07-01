@@ -8,9 +8,18 @@ CneaBD['Cod_Classe'] = CneaBD['Cod_Classe'].astype(str)
 
 result= pd.merge(RaisBD, CneaBD, left_on='CLAS_CNAE_20', right_on='Cod_Classe')
 
-result = result.groupby(['Ano', 'SETOR'])['Emprego_formal'].sum().reset_index()
+def get_top_cnaes(df, setor, top_n=10, order='desc'):
+    df_setor = df[df['SETOR'] == setor]
+    if order == 'desc':
+        return df_setor.groupby(['Ano', 'CLAS_CNAE_20', 'Descr_Classe'])['Emprego_formal'].sum().reset_index().sort_values(by='Emprego_formal', ascending=False).groupby('Ano').head(top_n)
+    else:
+        return df_setor.groupby(['Ano', 'CLAS_CNAE_20', 'Descr_Classe'])['Emprego_formal'].sum().reset_index().sort_values(by='Emprego_formal').groupby('Ano').head(top_n)
 
-result = result.sort_values(by=['Ano', 'SETOR'])
+top10_industria = get_top_cnaes(result, 'Indústria', top_n=10, order='desc')
+
+#print(top10_industria.head(100))
 
 
-result.to_csv('./src/data/tratado/Raisempregoporsetor.csv', sep=';', index=False)
+
+
+top10_industria.to_csv('./src/data/tratado/Raistop10descindustriageral.csv', sep=';', index=False)
