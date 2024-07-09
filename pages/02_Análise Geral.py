@@ -1,12 +1,11 @@
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
-import bar_chart_race as bcr
-from PIL import Image
+import base64
 
 
 
-st.set_page_config(page_title="Coleta e Tratamento de Dados RAIS")
+st.set_page_config(page_title="Coleta e Tratamento de Dados RAIS", layout='wide')
 
 st.title("Analisando os Dados RAIS - São Paulo")
 
@@ -441,53 +440,63 @@ with tab3:
     """)
 
 with tab4:
-    df = pd.read_csv('./src/data/tratado/Raistop10descindustriageral.csv', delimiter=';')
 
-        # Garantir que os anos estejam em ordem correta
-    df['Ano'] = pd.Categorical(df['Ano'], categories=[2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021], ordered=True)
 
-    # Pivotar o DataFrame para o formato necessário
-    df_pivot = df.pivot(index='Ano', columns='Descr_Classe', values='Emprego_formal').fillna(0)
+    
+    file_ = open(".\src\img\gif\Top10Empregoporsetor.gif", "rb")
+    contents = file_.read()
+    data_url = base64.b64encode(contents).decode("utf-8")
+    file_.close()
 
-    # Criar a animação e salvar como um arquivo GIF
-    bcr.bar_chart_race(
-        df=df_pivot,
-        filename='evolucao_emprego_formal.gif',
-        orientation='h',
-        sort='desc',
-        n_bars=10,
-        fixed_order=False,
-        fixed_max=True,
-        steps_per_period=10,
-        interpolate_period=False,
-        label_bars=True,
-        bar_size=.95,
-        period_label={'x': .99, 'y': .25, 'ha': 'right', 'va': 'center'},
-        period_fmt='%d',
-        period_summary_func=lambda v, r: {'x': .99, 'y': .18, 
-                                        's': f'Total Empregos: {v.sum():,.0f}', 
-                                        'ha': 'right', 'size': 8, 'family': 'Courier New'},
-        perpendicular_bar_func='median',
-        period_length=2000,
-        figsize=(10, 6),
-        dpi=144,
-        cmap='dark12',
-        title='Evolução do Emprego Formal por Setor',
-        title_size='',
-        bar_label_size=7,
-        tick_label_size=7,
-        shared_fontdict={'family' : 'Helvetica', 'color' : '.1'},
-        scale='linear',
-        writer=None,
-        fig=None,
-        bar_kwargs={'alpha': .7},
-        filter_column_colors=False)
+    st.markdown(
+        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+        unsafe_allow_html=True,
+    )
 
-    # Mostrar a animação no Streamlit
-    st.title("Evolução do Emprego Formal por Setor")
+    top10descindustria = pd.read_csv('./src/data/tratado/Raistop10descindustriageral.csv',sep=';',index_col=False)
+    top10descindustria = top10descindustria.sort_values(by=['Ano'])
 
-    # Ler o arquivo GIF e exibi-lo no Streamlit
-    gif_path = 'evolucao_emprego_formal.gif'
-    st.image(gif_path)
+    fig_top10 = go.Figure()
 
-    st.write("Animação salva como evolucao_emprego_formal.gif")
+       
+    setores = top10descindustria['Descr_Classe'].unique()
+    for setor in setores:
+        setor_data = top10descindustria[top10descindustria['Descr_Classe'] == setor]
+        fig_top10.add_trace(
+            go.Scatter(
+                x=setor_data['Ano'],
+                y=setor_data['Emprego_formal'],
+                mode='lines+markers',
+                name=setor,
+                text=setor_data['Descr_Classe'],
+                hovertemplate='<b>%{x}</b><br>Emprego Formal: %{y}<br>Setor: %{text}<extra></extra>'
+            )
+        )
+
+    # Configurar layout do gráfico
+    fig_top10.update_layout(
+        title=dict(
+            text='Emprego Formal por Setor ao Longo dos Anos',
+            font=dict(family='Arial, sans-serif', size=24, color='#CD8D00'),
+            x=0.5,  # Centralizado horizontalmente
+            y=0.9,  # Perto do topo
+            xanchor='center',
+            yanchor='top'
+        ),
+        xaxis=dict(
+            title='Ano',
+            titlefont=dict(size=16, color='#004175'),
+            gridcolor='lightgray',        
+            showline=True,        
+            mirror=True,
+            tickangle=45,
+            tickformat='%Y',  
+        ),
+        yaxis=dict(
+            title='Emprego Formal',
+            titlefont=dict(size=16, color='#004175'),
+            gridcolor='lightgray',        
+        ),
+    )
+
+    st.plotly_chart(fig_top10)

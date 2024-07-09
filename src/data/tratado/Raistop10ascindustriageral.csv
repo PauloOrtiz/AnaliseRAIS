@@ -1,0 +1,101 @@
+Ano;CLAS_CNAE_20;Descr_Classe;Emprego_formal
+2018;12107;Processamento industrial do fumo;1
+2017;12107;Processamento industrial do fumo;1
+2012;12107;Processamento industrial do fumo;1
+2018;7227;Extração de minério de estanho;1
+2014;7227;Extração de minério de estanho;1
+2013;12107;Processamento industrial do fumo;1
+2018;26809;Fabricação de mídias virgens, magnéticas e ópticas;2
+2021;26809;Fabricação de mídias virgens, magnéticas e ópticas;2
+2017;7227;Extração de minério de estanho;2
+2016;7227;Extração de minério de estanho;3
+2016;12107;Processamento industrial do fumo;5
+2020;7251;Extração de minerais radioativos;5
+2021;5003;Extração de carvão mineral;5
+2015;12107;Processamento industrial do fumo;6
+2021;7251;Extração de minerais radioativos;6
+2013;7227;Extração de minério de estanho;6
+2020;24113;Produção de ferro-gusa;7
+2021;24113;Produção de ferro-gusa;8
+2014;12107;Processamento industrial do fumo;8
+2012;7227;Extração de minério de estanho;8
+2018;19101;Coquerias;8
+2019;26809;Fabricação de mídias virgens, magnéticas e ópticas;9
+2019;24113;Produção de ferro-gusa;10
+2020;26809;Fabricação de mídias virgens, magnéticas e ópticas;10
+2017;7235;Extração de minério de manganês;11
+2018;24113;Produção de ferro-gusa;11
+2020;7243;Extração de minério de metais preciosos;11
+2012;8932;Extração de gemas (pedras preciosas e semipreciosas);11
+2019;30504;Fabricação de veículos militares de combate;12
+2018;7243;Extração de minério de metais preciosos;12
+2021;8932;Extração de gemas (pedras preciosas e semipreciosas);13
+2017;24113;Produção de ferro-gusa;13
+2019;7243;Extração de minério de metais preciosos;13
+2015;7251;Extração de minerais radioativos;13
+2017;7243;Extração de minério de metais preciosos;13
+2014;7251;Extração de minerais radioativos;15
+2020;7235;Extração de minério de manganês;15
+2018;7235;Extração de minério de manganês;15
+2016;24113;Produção de ferro-gusa;17
+2014;26809;Fabricação de mídias virgens, magnéticas e ópticas;17
+2020;8932;Extração de gemas (pedras preciosas e semipreciosas);17
+2016;7251;Extração de minerais radioativos;18
+2017;7251;Extração de minerais radioativos;18
+2012;7219;Extração de minério de alumínio;18
+2018;7251;Extração de minerais radioativos;18
+2019;7235;Extração de minério de manganês;19
+2015;7227;Extração de minério de estanho;20
+2013;7219;Extração de minério de alumínio;20
+2020;5003;Extração de carvão mineral;22
+2021;7235;Extração de minério de manganês;23
+2019;5003;Extração de carvão mineral;23
+2019;7251;Extração de minerais radioativos;25
+2013;7251;Extração de minerais radioativos;26
+2012;26809;Fabricação de mídias virgens, magnéticas e ópticas;29
+2017;24211;Produção de semi-acabados de aço;31
+2016;7219;Extração de minério de alumínio;31
+2018;24211;Produção de semi-acabados de aço;31
+2016;7243;Extração de minério de metais preciosos;31
+2018;5003;Extração de carvão mineral;32
+2016;5003;Extração de carvão mineral;33
+2013;5003;Extração de carvão mineral;33
+2017;5003;Extração de carvão mineral;37
+2017;26809;Fabricação de mídias virgens, magnéticas e ópticas;37
+2019;7103;Extração de minério de ferro;38
+2012;5003;Extração de carvão mineral;38
+2017;7219;Extração de minério de alumínio;38
+2012;7251;Extração de minerais radioativos;40
+2020;24211;Produção de semi-acabados de aço;40
+2014;5003;Extração de carvão mineral;41
+2019;8932;Extração de gemas (pedras preciosas e semipreciosas);42
+2014;7103;Extração de minério de ferro;46
+2015;7243;Extração de minério de metais preciosos;50
+2021;7243;Extração de minério de metais preciosos;50
+2015;5003;Extração de carvão mineral;54
+2020;30504;Fabricação de veículos militares de combate;54
+2019;24211;Produção de semi-acabados de aço;56
+2013;7103;Extração de minério de ferro;58
+2020;7227;Extração de minério de estanho;58
+2021;8924;Extração e refino de sal marinho e sal-gema;62
+2016;26809;Fabricação de mídias virgens, magnéticas e ópticas;63
+2014;7219;Extração de minério de alumínio;65
+2014;8916;Extração de minerais para fabricação de adubos, fertilizantes e outros produtos químicos;67
+2021;7227;Extração de minério de estanho;68
+2021;7219;Extração de minério de alumínio;69
+2012;7103;Extração de minério de ferro;90
+2015;24113;Produção de ferro-gusa;91
+2013;26809;Fabricação de mídias virgens, magnéticas e ópticas;93
+2015;26809;Fabricação de mídias virgens, magnéticas e ópticas;95
+2012;6000;Extração de petróleo e gás natural;98
+2016;7103;Extração de minério de ferro;100
+2012;8916;Extração de minerais para fabricação de adubos, fertilizantes e outros produtos químicos;102
+2016;8924;Extração e refino de sal marinho e sal-gema;116
+2013;24113;Produção de ferro-gusa;117
+2013;8916;Extração de minerais para fabricação de adubos, fertilizantes e outros produtos químicos;131
+2015;7103;Extração de minério de ferro;132
+2015;8924;Extração e refino de sal marinho e sal-gema;145
+2013;35301;Produção e distribuição de vapor, água quente e ar condicionado;150
+2014;24113;Produção de ferro-gusa;163
+2015;19322;Fabricação de biocombustíveis, exceto álcool;190
+2014;8924;Extração e refino de sal marinho e sal-gema;190
